@@ -166,6 +166,7 @@ namespace Sudoku {
       this.Location = new Point(300, 100);
       this.ClientSize = new Size(333, 383);
       this.KeyPreview = true;
+      this.Icon = Sudoku.Properties.Resources.Sudoku;
 
       this.SizeChanged += delegate (object sender, EventArgs e) {
         this.menuPanel.Size = this.ClientSize;
@@ -347,11 +348,11 @@ namespace Sudoku {
 
       this.homePicture.Parent = this.boardPanel;
       this.homePicture.Size = new Size(32, 32);
-      //this.homePicture.Image = System.Drawing.Image.FromData(home32);
+      this.homePicture.Image = Sudoku.Properties.Resources.Home;
       this.homePicture.Location = new Point(9, 9);
       this.homePicture.Cursor = Cursors.Hand;
-      //this.homePicture.MouseEnter += delegate (object sender, EventArgs e) { this.homePicture.Image = *System.Drawing.Image.FromData(homeHighlight32); };
-      //this.homePicture.MouseLeave += delegate (object sender, EventArgs e) { this.homePicture.Image = *System.Drawing.Image.FromData(home32); };
+      this.homePicture.MouseEnter += delegate (object sender, EventArgs e) { this.homePicture.Image = Sudoku.Properties.Resources.HomeHighlight; };
+      this.homePicture.MouseLeave += delegate (object sender, EventArgs e) { this.homePicture.Image = Sudoku.Properties.Resources.Home; };
       this.homePicture.Click += delegate (object sender, EventArgs e) {
         this.gamePanel.Visible = false;
         this.boardPanel.Visible = false;

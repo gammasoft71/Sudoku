@@ -5,11 +5,11 @@ using System.Runtime.CompilerServices;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle("Sudoku")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Sudoku game")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("${AuthorCopyright}")]
+[assembly: AssemblyCompany("Gammasoft")]
+[assembly: AssemblyProduct("Sudoku")]
+[assembly: AssemblyCopyright("© 2018 by Gammasoft.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
