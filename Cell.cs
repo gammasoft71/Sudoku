@@ -3,13 +3,6 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace Sudoku {
-  enum Level {
-    Easy,
-    Medium,
-    Hard,
-    Impossible
-  }
-
   class Cell : System.Windows.Forms.Control {
     public Cell() {
       this.ReadOnly = false;
