@@ -1,3 +1,27 @@
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Sudoku {
+  enum Level {
+    Easy,
+    Medium,
+    Hard,
+    Impossible
+  }
+
+  class Cell : System.Windows.Forms.Control {
+    public Cell() {
+      this.ReadOnly = false;
+    }
+    public Cell(Cell cell) {
+      this.value = cell.value;
+      this.ReadOnly = cell.ReadOnly;
+    }
+
+    public int Value {
+      get { return this.value; }
+      set {
         if (value < 0 || value > 9)
           throw new System.ArgumentOutOfRangeException();
         if (this.value != value) {
