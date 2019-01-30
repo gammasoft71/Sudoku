@@ -38,3 +38,29 @@
       base.OnGotFocus(e);
       this.Invalidate();
     }
+
+    protected override void OnLostFocus(EventArgs e) {
+      base.OnLostFocus(e);
+      this.Invalidate();
+    }
+
+    override protected void OnKeyPress(System.Windows.Forms.KeyPressEventArgs e) {
+      if (e.KeyChar >= '0' && e.KeyChar <= '9')
+        this.Value = e.KeyChar - '0';
+      else if (e.KeyChar == (char)System.Windows.Forms.Keys.Back || e.KeyChar == (char)System.Windows.Forms.Keys.Delete)
+        this.Value = 0;
+      base.OnKeyPress(e);
+    }
+
+    virtual public void OnValueChanged(System.EventArgs e) {
+      if (this.ValueChanged != null)
+        this.ValueChanged(this, e);
+    }
+
+    override protected System.Drawing.Size DefaultSize { get { return new System.Drawing.Size(98, 98); } }
+
+    public System.EventHandler ValueChanged = null;
+
+    private int value = 0;
+  }
+}
