@@ -1,5 +1,5 @@
 namespace Sudoku {
-  enum Level {
+  internal enum Level {
     Easy,
     Medium,
     Hard,
