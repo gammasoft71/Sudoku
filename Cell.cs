@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 
 namespace Sudoku {
-  class Cell : System.Windows.Forms.Control {
+  internal class Cell : System.Windows.Forms.Control {
     public Cell() {
       this.ReadOnly = false;
     }
