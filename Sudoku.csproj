@@ -46,6 +46,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Cell.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="Chrono.cs" />
+    <Compile Include="MenuPanel.cs" />
+    <Compile Include="FormSudoku.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
